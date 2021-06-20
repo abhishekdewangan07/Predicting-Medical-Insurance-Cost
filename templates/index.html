@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Medical Insurance Cost Prediction</h2>
+            <h3>Age</h3><br><input id="first" name="Age" type="number" required="required">
+            <h3>What is your gender?</h3><br><select name="Sex" id="second" required="required">
+			    <option value="male">male</option>
+				<option value="female">female</option>
+			</select>
+            <h3>bmi</h3><br><input id="third" name="bmi" required="required">
+            <h3>Number of children</h3><br><input id="fourth" name="children" required="required">
+            <h3>Are you a smoker?</h3><br><select name="smoker" id="fifth" required="required">
+                <option value="yes">yes</option>
+				<option value="no">no</option>
+            </select>
+            <h3>Region</h3><br><select name="region" id="sixth" required="required">
+                <option value="northwest">northwest</option>
+				<option value="southeast">southeast</option>
+				<option value="southwest">southwest</option>
+            </select>
+            <br><br><button id="sub" type="submit">Calculate the Medical Insurance Price</button>
+            <br>
+
+
+        </form>
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+		
+		
+		#second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+		
+        #second:hover {
+            background-color: coral;
+        }		
+	
+		#fifth {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #fifth:hover {
+            background-color: coral;
+        }
+        
+        #sixth {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sixth:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+		
+		
+    </style>
+</body>
+
+</html>
