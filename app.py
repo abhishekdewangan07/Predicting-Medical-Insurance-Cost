@@ -85,6 +85,7 @@ def predict():
         return render_template('index.html',prediction_text="Medical Insurance Cost is {}".format(prediction))
 
 if __name__=="__main__":
-    app.run(host='0.0.0.0', port=80)
+    app.run(debug=True)
+    #app.run(host='0.0.0.0', port=80)
     #app.run(host='0.0.0.0', port=5003,debug=True)
     #waitress.serve(app, host='0.0.0.0', port=5003)
