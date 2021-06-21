@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT wsgi:app
+waitress.serve(app, host='0.0.0.0', port=8000)
