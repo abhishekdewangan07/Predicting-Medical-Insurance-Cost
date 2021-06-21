@@ -1,1 +1,1 @@
-waitress.serve(app, host='0.0.0.0', port=8000)
+web: waitress.serve(app, listen='0.0.0.0:5003') app:app
