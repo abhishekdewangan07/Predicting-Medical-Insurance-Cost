@@ -1,1 +1,1 @@
-web: waitress-serve --listen=0.0.0.0:5003 app:app
+web: waitress-serve app:app
